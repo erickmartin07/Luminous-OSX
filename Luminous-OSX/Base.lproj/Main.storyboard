@@ -673,13 +673,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="959" height="543"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sq8-mw-cA2">
+                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sq8-mw-cA2">
                                 <rect key="frame" x="7" y="9" width="461" height="464"/>
-                                <clipView key="contentView" ambiguous="YES" id="afj-kk-fXs">
+                                <clipView key="contentView" id="afj-kk-fXs">
                                     <rect key="frame" x="1" y="1" width="459" height="462"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView ambiguous="YES" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="N3v-9F-IO9">
+                                        <textView importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="N3v-9F-IO9">
                                             <rect key="frame" x="0.0" y="0.0" width="459" height="462"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <animations/>
@@ -712,14 +712,17 @@ NSNumber eventOrderNumber</string>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </scroller>
-                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="02k-ti-S0O">
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="02k-ti-S0O">
                                     <rect key="frame" x="444" y="1" width="16" height="462"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </scroller>
                             </scrollView>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fQl-YK-9BO">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fQl-YK-9BO">
                                 <rect key="frame" x="129" y="508" width="339" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="gSN-dC-1gS"/>
+                                </constraints>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="Event" drawsBackground="YES" id="SGb-6d-tad">
                                     <font key="font" metaFont="system"/>
@@ -727,8 +730,11 @@ NSNumber eventOrderNumber</string>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E9M-lL-YoQ">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="E9M-lL-YoQ">
                                 <rect key="frame" x="129" y="481" width="339" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="mxk-UR-kRF"/>
+                                </constraints>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="eventID" drawsBackground="YES" id="YKe-1M-0DQ">
                                     <font key="font" metaFont="system"/>
@@ -736,13 +742,13 @@ NSNumber eventOrderNumber</string>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryU-Az-5Ap">
+                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryU-Az-5Ap">
                                 <rect key="frame" x="485" y="9" width="462" height="464"/>
-                                <clipView key="contentView" ambiguous="YES" id="xIP-M0-Pkp">
+                                <clipView key="contentView" id="xIP-M0-Pkp">
                                     <rect key="frame" x="1" y="1" width="460" height="462"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView ambiguous="YES" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="5Ip-sp-AL2">
+                                        <textView importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="5Ip-sp-AL2">
                                             <rect key="frame" x="0.0" y="0.0" width="460" height="462"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <animations/>
@@ -763,14 +769,18 @@ NSNumber eventOrderNumber</string>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </scroller>
-                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="mYy-Iy-KbH">
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="mYy-Iy-KbH">
                                     <rect key="frame" x="445" y="1" width="16" height="462"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </scroller>
                             </scrollView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dbt-aW-sl2">
-                                <rect key="frame" x="18" y="511" width="100" height="17"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Dbt-aW-sl2">
+                                <rect key="frame" x="19" y="511" width="100" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="gh8-aw-qAP"/>
+                                    <constraint firstAttribute="height" constant="17" id="nTN-Z0-Ly8"/>
+                                </constraints>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Model Name" id="nTN-mm-1uC">
                                     <font key="font" metaFont="system"/>
@@ -778,8 +788,12 @@ NSNumber eventOrderNumber</string>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="69d-K0-LPK">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="69d-K0-LPK">
                                 <rect key="frame" x="18" y="486" width="100" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="a4q-i5-cVD"/>
+                                    <constraint firstAttribute="height" constant="17" id="nMk-RY-8qa"/>
+                                </constraints>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Model ID" id="nz2-ok-6n6">
                                     <font key="font" metaFont="system"/>
@@ -787,7 +801,7 @@ NSNumber eventOrderNumber</string>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XIx-mH-bkD">
+                            <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XIx-mH-bkD">
                                 <rect key="frame" x="483" y="507" width="466" height="24"/>
                                 <animations/>
                                 <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="EeV-w6-s8n">
@@ -802,7 +816,7 @@ NSNumber eventOrderNumber</string>
                                     <action selector="changeState:" target="XfG-lQ-9wD" id="HCb-9w-fRQ"/>
                                 </connections>
                             </segmentedControl>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0fl-0O-TLr">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0fl-0O-TLr">
                                 <rect key="frame" x="479" y="474" width="474" height="32"/>
                                 <animations/>
                                 <buttonCell key="cell" type="push" title="GENERATE" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="esP-ZZ-oPB">
@@ -814,6 +828,33 @@ NSNumber eventOrderNumber</string>
                                 </connections>
                             </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="69d-K0-LPK" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="0df-sF-w1q"/>
+                            <constraint firstAttribute="trailing" secondItem="0fl-0O-TLr" secondAttribute="trailing" constant="12" id="9jv-x2-4wM"/>
+                            <constraint firstItem="ryU-Az-5Ap" firstAttribute="top" secondItem="0fl-0O-TLr" secondAttribute="bottom" constant="8" id="B4d-dp-jr5"/>
+                            <constraint firstAttribute="trailing" secondItem="ryU-Az-5Ap" secondAttribute="trailing" constant="12" id="C9d-LA-ffM"/>
+                            <constraint firstItem="XIx-mH-bkD" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="13" id="CNq-DC-TtD"/>
+                            <constraint firstItem="0fl-0O-TLr" firstAttribute="top" secondItem="XIx-mH-bkD" secondAttribute="bottom" constant="7" id="Hdk-K1-qI8"/>
+                            <constraint firstAttribute="bottom" secondItem="ryU-Az-5Ap" secondAttribute="bottom" constant="9" id="JmB-zx-2Ry"/>
+                            <constraint firstItem="Sq8-mw-cA2" firstAttribute="width" secondItem="ryU-Az-5Ap" secondAttribute="width" constant="-1" id="LHg-3S-PmF"/>
+                            <constraint firstItem="fQl-YK-9BO" firstAttribute="width" secondItem="E9M-lL-YoQ" secondAttribute="width" id="MDS-Oi-4md"/>
+                            <constraint firstItem="ryU-Az-5Ap" firstAttribute="leading" secondItem="Sq8-mw-cA2" secondAttribute="trailing" constant="17" id="MkF-MJ-9Wu"/>
+                            <constraint firstItem="fQl-YK-9BO" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="13" id="T1r-hD-wKH"/>
+                            <constraint firstItem="Sq8-mw-cA2" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="7" id="YDo-j9-Zej"/>
+                            <constraint firstItem="fQl-YK-9BO" firstAttribute="leading" secondItem="Dbt-aW-sl2" secondAttribute="trailing" constant="12" id="a3p-Mf-Rmo"/>
+                            <constraint firstItem="Sq8-mw-cA2" firstAttribute="height" secondItem="ryU-Az-5Ap" secondAttribute="height" id="dQM-Nk-Usk"/>
+                            <constraint firstAttribute="bottom" secondItem="Sq8-mw-cA2" secondAttribute="bottom" constant="9" id="fNm-ZF-jdM"/>
+                            <constraint firstItem="0fl-0O-TLr" firstAttribute="width" secondItem="ryU-Az-5Ap" secondAttribute="width" id="fXy-3n-ih5"/>
+                            <constraint firstItem="69d-K0-LPK" firstAttribute="top" secondItem="Dbt-aW-sl2" secondAttribute="bottom" constant="8" id="gLq-ak-80O"/>
+                            <constraint firstItem="E9M-lL-YoQ" firstAttribute="leading" secondItem="69d-K0-LPK" secondAttribute="trailing" constant="13" id="gMt-cw-jAu"/>
+                            <constraint firstItem="Dbt-aW-sl2" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="15" id="gaZ-X0-mpr"/>
+                            <constraint firstItem="XIx-mH-bkD" firstAttribute="width" secondItem="0fl-0O-TLr" secondAttribute="width" id="kh9-0a-W2N"/>
+                            <constraint firstItem="XIx-mH-bkD" firstAttribute="leading" secondItem="fQl-YK-9BO" secondAttribute="trailing" constant="17" id="kzN-u9-bEl"/>
+                            <constraint firstItem="0fl-0O-TLr" firstAttribute="leading" secondItem="E9M-lL-YoQ" secondAttribute="trailing" constant="17" id="lPr-jg-0UC"/>
+                            <constraint firstItem="E9M-lL-YoQ" firstAttribute="top" secondItem="fQl-YK-9BO" secondAttribute="bottom" constant="5" id="s7Q-3z-lhG"/>
+                            <constraint firstItem="Dbt-aW-sl2" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="21" id="xkB-CW-3RA"/>
+                            <constraint firstItem="Sq8-mw-cA2" firstAttribute="top" secondItem="69d-K0-LPK" secondAttribute="bottom" constant="13" id="yhm-Kk-aTM"/>
+                        </constraints>
                         <animations/>
                     </view>
                     <connections>

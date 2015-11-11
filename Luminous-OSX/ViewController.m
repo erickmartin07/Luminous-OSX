@@ -42,8 +42,8 @@
         resultTextView.string = [self createDatabaseStringWithIdString:primaryKeyTextField.stringValue];
     }
     
-//    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-//    [pasteboard setString:resultTextView.text];
+    [[NSPasteboard generalPasteboard] clearContents];
+    [[NSPasteboard generalPasteboard] setString:resultTextView.string forType:NSStringPboardType];
     
 }
 
