@@ -1,0 +1,526 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3453A0531BF2FDD4007C63D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3453A0521BF2FDD4007C63D4 /* AppDelegate.m */; };
+		3453A0561BF2FDD4007C63D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3453A0551BF2FDD4007C63D4 /* main.m */; };
+		3453A0591BF2FDD4007C63D4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3453A0581BF2FDD4007C63D4 /* ViewController.m */; };
+		3453A05B1BF2FDD4007C63D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3453A05A1BF2FDD4007C63D4 /* Assets.xcassets */; };
+		3453A05E1BF2FDD4007C63D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3453A05C1BF2FDD4007C63D4 /* Main.storyboard */; };
+		3453A0691BF2FDD4007C63D4 /* Luminous_OSXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3453A0681BF2FDD4007C63D4 /* Luminous_OSXTests.m */; };
+		3453A0741BF2FDD5007C63D4 /* Luminous_OSXUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3453A0731BF2FDD5007C63D4 /* Luminous_OSXUITests.m */; };
+		3453A0841BF30589007C63D4 /* VariableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3453A0831BF30589007C63D4 /* VariableModel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3453A0651BF2FDD4007C63D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3453A0461BF2FDD4007C63D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3453A04D1BF2FDD4007C63D4;
+			remoteInfo = "Luminous-OSX";
+		};
+		3453A0701BF2FDD5007C63D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3453A0461BF2FDD4007C63D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3453A04D1BF2FDD4007C63D4;
+			remoteInfo = "Luminous-OSX";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3453A04E1BF2FDD4007C63D4 /* Luminous-OSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Luminous-OSX.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3453A0511BF2FDD4007C63D4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3453A0521BF2FDD4007C63D4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3453A0551BF2FDD4007C63D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3453A0571BF2FDD4007C63D4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3453A0581BF2FDD4007C63D4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3453A05A1BF2FDD4007C63D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3453A05D1BF2FDD4007C63D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3453A05F1BF2FDD4007C63D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3453A0641BF2FDD4007C63D4 /* Luminous-OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Luminous-OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3453A0681BF2FDD4007C63D4 /* Luminous_OSXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Luminous_OSXTests.m; sourceTree = "<group>"; };
+		3453A06A1BF2FDD4007C63D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3453A06F1BF2FDD5007C63D4 /* Luminous-OSXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Luminous-OSXUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3453A0731BF2FDD5007C63D4 /* Luminous_OSXUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Luminous_OSXUITests.m; sourceTree = "<group>"; };
+		3453A0751BF2FDD5007C63D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3453A0821BF30589007C63D4 /* VariableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VariableModel.h; sourceTree = "<group>"; };
+		3453A0831BF30589007C63D4 /* VariableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VariableModel.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3453A04B1BF2FDD4007C63D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3453A0611BF2FDD4007C63D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3453A06C1BF2FDD5007C63D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3453A0451BF2FDD4007C63D4 = {
+			isa = PBXGroup;
+			children = (
+				3453A0501BF2FDD4007C63D4 /* Luminous-OSX */,
+				3453A0671BF2FDD4007C63D4 /* Luminous-OSXTests */,
+				3453A0721BF2FDD5007C63D4 /* Luminous-OSXUITests */,
+				3453A04F1BF2FDD4007C63D4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3453A04F1BF2FDD4007C63D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3453A04E1BF2FDD4007C63D4 /* Luminous-OSX.app */,
+				3453A0641BF2FDD4007C63D4 /* Luminous-OSXTests.xctest */,
+				3453A06F1BF2FDD5007C63D4 /* Luminous-OSXUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3453A0501BF2FDD4007C63D4 /* Luminous-OSX */ = {
+			isa = PBXGroup;
+			children = (
+				3453A0811BF30573007C63D4 /* Model */,
+				3453A0511BF2FDD4007C63D4 /* AppDelegate.h */,
+				3453A0521BF2FDD4007C63D4 /* AppDelegate.m */,
+				3453A0571BF2FDD4007C63D4 /* ViewController.h */,
+				3453A0581BF2FDD4007C63D4 /* ViewController.m */,
+				3453A05A1BF2FDD4007C63D4 /* Assets.xcassets */,
+				3453A05C1BF2FDD4007C63D4 /* Main.storyboard */,
+				3453A05F1BF2FDD4007C63D4 /* Info.plist */,
+				3453A0541BF2FDD4007C63D4 /* Supporting Files */,
+			);
+			path = "Luminous-OSX";
+			sourceTree = "<group>";
+		};
+		3453A0541BF2FDD4007C63D4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3453A0551BF2FDD4007C63D4 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3453A0671BF2FDD4007C63D4 /* Luminous-OSXTests */ = {
+			isa = PBXGroup;
+			children = (
+				3453A0681BF2FDD4007C63D4 /* Luminous_OSXTests.m */,
+				3453A06A1BF2FDD4007C63D4 /* Info.plist */,
+			);
+			path = "Luminous-OSXTests";
+			sourceTree = "<group>";
+		};
+		3453A0721BF2FDD5007C63D4 /* Luminous-OSXUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3453A0731BF2FDD5007C63D4 /* Luminous_OSXUITests.m */,
+				3453A0751BF2FDD5007C63D4 /* Info.plist */,
+			);
+			path = "Luminous-OSXUITests";
+			sourceTree = "<group>";
+		};
+		3453A0811BF30573007C63D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3453A0821BF30589007C63D4 /* VariableModel.h */,
+				3453A0831BF30589007C63D4 /* VariableModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3453A04D1BF2FDD4007C63D4 /* Luminous-OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3453A0781BF2FDD5007C63D4 /* Build configuration list for PBXNativeTarget "Luminous-OSX" */;
+			buildPhases = (
+				3453A04A1BF2FDD4007C63D4 /* Sources */,
+				3453A04B1BF2FDD4007C63D4 /* Frameworks */,
+				3453A04C1BF2FDD4007C63D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Luminous-OSX";
+			productName = "Luminous-OSX";
+			productReference = 3453A04E1BF2FDD4007C63D4 /* Luminous-OSX.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3453A0631BF2FDD4007C63D4 /* Luminous-OSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3453A07B1BF2FDD5007C63D4 /* Build configuration list for PBXNativeTarget "Luminous-OSXTests" */;
+			buildPhases = (
+				3453A0601BF2FDD4007C63D4 /* Sources */,
+				3453A0611BF2FDD4007C63D4 /* Frameworks */,
+				3453A0621BF2FDD4007C63D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3453A0661BF2FDD4007C63D4 /* PBXTargetDependency */,
+			);
+			name = "Luminous-OSXTests";
+			productName = "Luminous-OSXTests";
+			productReference = 3453A0641BF2FDD4007C63D4 /* Luminous-OSXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3453A06E1BF2FDD5007C63D4 /* Luminous-OSXUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3453A07E1BF2FDD5007C63D4 /* Build configuration list for PBXNativeTarget "Luminous-OSXUITests" */;
+			buildPhases = (
+				3453A06B1BF2FDD5007C63D4 /* Sources */,
+				3453A06C1BF2FDD5007C63D4 /* Frameworks */,
+				3453A06D1BF2FDD5007C63D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3453A0711BF2FDD5007C63D4 /* PBXTargetDependency */,
+			);
+			name = "Luminous-OSXUITests";
+			productName = "Luminous-OSXUITests";
+			productReference = 3453A06F1BF2FDD5007C63D4 /* Luminous-OSXUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3453A0461BF2FDD4007C63D4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Erick Martin";
+				TargetAttributes = {
+					3453A04D1BF2FDD4007C63D4 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					3453A0631BF2FDD4007C63D4 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 3453A04D1BF2FDD4007C63D4;
+					};
+					3453A06E1BF2FDD5007C63D4 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 3453A04D1BF2FDD4007C63D4;
+					};
+				};
+			};
+			buildConfigurationList = 3453A0491BF2FDD4007C63D4 /* Build configuration list for PBXProject "Luminous-OSX" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3453A0451BF2FDD4007C63D4;
+			productRefGroup = 3453A04F1BF2FDD4007C63D4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3453A04D1BF2FDD4007C63D4 /* Luminous-OSX */,
+				3453A0631BF2FDD4007C63D4 /* Luminous-OSXTests */,
+				3453A06E1BF2FDD5007C63D4 /* Luminous-OSXUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3453A04C1BF2FDD4007C63D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3453A05B1BF2FDD4007C63D4 /* Assets.xcassets in Resources */,
+				3453A05E1BF2FDD4007C63D4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3453A0621BF2FDD4007C63D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3453A06D1BF2FDD5007C63D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3453A04A1BF2FDD4007C63D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3453A0591BF2FDD4007C63D4 /* ViewController.m in Sources */,
+				3453A0841BF30589007C63D4 /* VariableModel.m in Sources */,
+				3453A0561BF2FDD4007C63D4 /* main.m in Sources */,
+				3453A0531BF2FDD4007C63D4 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3453A0601BF2FDD4007C63D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3453A0691BF2FDD4007C63D4 /* Luminous_OSXTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3453A06B1BF2FDD5007C63D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3453A0741BF2FDD5007C63D4 /* Luminous_OSXUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3453A0661BF2FDD4007C63D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3453A04D1BF2FDD4007C63D4 /* Luminous-OSX */;
+			targetProxy = 3453A0651BF2FDD4007C63D4 /* PBXContainerItemProxy */;
+		};
+		3453A0711BF2FDD5007C63D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3453A04D1BF2FDD4007C63D4 /* Luminous-OSX */;
+			targetProxy = 3453A0701BF2FDD5007C63D4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3453A05C1BF2FDD4007C63D4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3453A05D1BF2FDD4007C63D4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3453A0761BF2FDD5007C63D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3453A0771BF2FDD5007C63D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3453A0791BF2FDD5007C63D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Luminous-OSX/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ems.Luminous-OSX";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3453A07A1BF2FDD5007C63D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Luminous-OSX/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ems.Luminous-OSX";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3453A07C1BF2FDD5007C63D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Luminous-OSXTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ems.Luminous-OSXTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Luminous-OSX.app/Contents/MacOS/Luminous-OSX";
+			};
+			name = Debug;
+		};
+		3453A07D1BF2FDD5007C63D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Luminous-OSXTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ems.Luminous-OSXTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Luminous-OSX.app/Contents/MacOS/Luminous-OSX";
+			};
+			name = Release;
+		};
+		3453A07F1BF2FDD5007C63D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Luminous-OSXUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ems.Luminous-OSXUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Luminous-OSX";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		3453A0801BF2FDD5007C63D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Luminous-OSXUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ems.Luminous-OSXUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Luminous-OSX";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3453A0491BF2FDD4007C63D4 /* Build configuration list for PBXProject "Luminous-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3453A0761BF2FDD5007C63D4 /* Debug */,
+				3453A0771BF2FDD5007C63D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3453A0781BF2FDD5007C63D4 /* Build configuration list for PBXNativeTarget "Luminous-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3453A0791BF2FDD5007C63D4 /* Debug */,
+				3453A07A1BF2FDD5007C63D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3453A07B1BF2FDD5007C63D4 /* Build configuration list for PBXNativeTarget "Luminous-OSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3453A07C1BF2FDD5007C63D4 /* Debug */,
+				3453A07D1BF2FDD5007C63D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3453A07E1BF2FDD5007C63D4 /* Build configuration list for PBXNativeTarget "Luminous-OSXUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3453A07F1BF2FDD5007C63D4 /* Debug */,
+				3453A0801BF2FDD5007C63D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3453A0461BF2FDD4007C63D4 /* Project object */;
+}
