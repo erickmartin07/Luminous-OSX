@@ -69,32 +69,33 @@
     for(VariableModel *varModel in resultArray){
         
         //Dict Result
-        NSString *dictString = [NSString stringWithFormat:
-                                @"            self.%@ = [self %@:jsonDict[@\"%@\"]];\n", varModel.variableName, varModel.variableDict, varModel.variableName];
         
-        dictionaryString = [dictionaryString stringByAppendingString:dictString];
-        
-        
-        if(![varModel.variableType isEqualToString:@"NSArray"] && ![varModel.variableType isEqualToString:@"NSSet"]){
+        if(![varModel.variableName isEqualToString:@""] && varModel.variableName){
+            NSString *dictString = [NSString stringWithFormat:
+                                    @"            self.%@ = [self %@:jsonDict[@\"%@\"]];\n", varModel.variableName, varModel.variableDict, varModel.variableName];
             
-            //FM Result
-            NSString *fmString = [NSString stringWithFormat:
-                                  @"            self.%@ = [result %@:@\"%@\"];\n", varModel.variableName, varModel.variableFMResultSet, varModel.variableName];
-            
-            fmResultString = [fmResultString stringByAppendingString:fmString];
-            
-            //Decode Result
-            NSString *decodeStr = [NSString stringWithFormat:
-                                   @"           self.%@ = [decoder %@:@\"%@\"];\n", varModel.variableName, varModel.variableDecode, varModel.variableName];
-            decodeResultString = [decodeResultString stringByAppendingString:decodeStr];
-            
-            
-            //Encode Result
-            NSString *encodeStr = [NSString stringWithFormat:
-                                   @"           [encoder %@:self.%@ forKey:@\"%@\"];\n", varModel.variableEncode, varModel.variableName, varModel.variableName];
-            encodeResultString = [encodeResultString stringByAppendingString:encodeStr];
+            dictionaryString = [dictionaryString stringByAppendingString:dictString];
+    
+            if(![varModel.variableType isEqualToString:@"NSArray"] && ![varModel.variableType isEqualToString:@"NSSet"]){
+                
+                //FM Result
+                NSString *fmString = [NSString stringWithFormat:
+                                      @"            self.%@ = [result %@:@\"%@\"];\n", varModel.variableName, varModel.variableFMResultSet, varModel.variableName];
+                
+                fmResultString = [fmResultString stringByAppendingString:fmString];
+                
+                //Decode Result
+                NSString *decodeStr = [NSString stringWithFormat:
+                                       @"           self.%@ = [decoder %@:@\"%@\"];\n", varModel.variableName, varModel.variableDecode, varModel.variableName];
+                decodeResultString = [decodeResultString stringByAppendingString:decodeStr];
+                
+                
+                //Encode Result
+                NSString *encodeStr = [NSString stringWithFormat:
+                                       @"           [encoder %@:self.%@ forKey:@\"%@\"];\n", varModel.variableEncode, varModel.variableName, varModel.variableName];
+                encodeResultString = [encodeResultString stringByAppendingString:encodeStr];
+            }
         }
-        
         
     }
     
@@ -132,9 +133,11 @@
     
     for(VariableModel *varMod in resultArray){
         
-        NSString *varInString = [NSString stringWithFormat:@"@property (nonatomic, %@) %@%@%@\n", varMod.variableAssignType, varMod.variableType, varMod.variablePrimitive, varMod.variableName];
+        if(![varMod.variableName isEqualToString:@""] && varMod.variableName){
+            NSString *varInString = [NSString stringWithFormat:@"@property (nonatomic, %@) %@%@%@;\n", varMod.variableAssignType, varMod.variableType, varMod.variablePrimitive, varMod.variableName];
         
-        variableString = [variableString stringByAppendingString:varInString];
+            variableString = [variableString stringByAppendingString:varInString];
+        }
     }
     
     
