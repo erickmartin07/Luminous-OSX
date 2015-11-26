@@ -56,7 +56,10 @@
     
     for(NSString *string in data){
         VariableModel *varModel = [[VariableModel alloc] initWithString:string];
-        [resultArray addObject:varModel];
+        
+        if(![varModel.variableName isEqualToString:@""] && varModel.variableName){
+            [resultArray addObject:varModel];
+        }
     }
     return resultArray;
 }
@@ -71,41 +74,36 @@
     for(VariableModel *varModel in resultArray){
         
         //Dict Result
+        NSString *dictString = [NSString stringWithFormat:
+                                @"            self.%@ = [self %@:jsonDict[@\"%@\"]];\n", varModel.variableName, varModel.variableDict, varModel.variableName];
         
-        if(![varModel.variableName isEqualToString:@""] && varModel.variableName){
-            
-            NSString *dictString = [NSString stringWithFormat:
-                                    @"            self.%@ = [self %@:jsonDict[@\"%@\"]];\n", varModel.variableName, varModel.variableDict, varModel.variableName];
-            
-            if([varModel.variableType isEqualToString:@"NSDate"]){
-                dictString = [NSString stringWithFormat:
-                                    @"            self.%@ = [jsonDict objectForKey:@\"%@\"];\n", varModel.variableName, varModel.variableName];
-            }
-            
-            
-            dictionaryString = [dictionaryString stringByAppendingString:dictString];
-    
-            if(![varModel.variableType isEqualToString:@"NSArray"] && ![varModel.variableType isEqualToString:@"NSSet"]){
-                
-                //FM Result
-                NSString *fmString = [NSString stringWithFormat:
-                                      @"            self.%@ = [result %@:@\"%@\"];\n", varModel.variableName, varModel.variableFMResultSet, varModel.variableName];
-                
-                fmResultString = [fmResultString stringByAppendingString:fmString];
-                
-                //Decode Result
-                NSString *decodeStr = [NSString stringWithFormat:
-                                       @"           self.%@ = [decoder %@:@\"%@\"];\n", varModel.variableName, varModel.variableDecode, varModel.variableName];
-                decodeResultString = [decodeResultString stringByAppendingString:decodeStr];
-                
-                
-                //Encode Result
-                NSString *encodeStr = [NSString stringWithFormat:
-                                       @"           [encoder %@:self.%@ forKey:@\"%@\"];\n", varModel.variableEncode, varModel.variableName, varModel.variableName];
-                encodeResultString = [encodeResultString stringByAppendingString:encodeStr];
-            }
+        if([varModel.variableType isEqualToString:@"NSDate"]){
+            dictString = [NSString stringWithFormat:
+                                @"            self.%@ = [jsonDict objectForKey:@\"%@\"];\n", varModel.variableName, varModel.variableName];
         }
         
+        
+        dictionaryString = [dictionaryString stringByAppendingString:dictString];
+
+        if(![varModel.variableType isEqualToString:@"NSArray"] && ![varModel.variableType isEqualToString:@"NSSet"]){
+            
+            //FM Result
+            NSString *fmString = [NSString stringWithFormat:
+                                  @"            self.%@ = [result %@:@\"%@\"];\n", varModel.variableName, varModel.variableFMResultSet, varModel.variableName];
+            
+            fmResultString = [fmResultString stringByAppendingString:fmString];
+            
+            //Decode Result
+            NSString *decodeStr = [NSString stringWithFormat:
+                                   @"           self.%@ = [decoder %@:@\"%@\"];\n", varModel.variableName, varModel.variableDecode, varModel.variableName];
+            decodeResultString = [decodeResultString stringByAppendingString:decodeStr];
+            
+            
+            //Encode Result
+            NSString *encodeStr = [NSString stringWithFormat:
+                                   @"           [encoder %@:self.%@ forKey:@\"%@\"];\n", varModel.variableEncode, varModel.variableName, varModel.variableName];
+            encodeResultString = [encodeResultString stringByAppendingString:encodeStr];
+        }
     }
     
     NSString *resultString = [NSString stringWithFormat:@"//Copy BaseModel From Spylight\n\n\n"
@@ -187,7 +185,6 @@
                             [NSString stringWithFormat:@"%@%@",varModel.variableDefault, i<resultArray.count-1?@",":@""]
                             ];
         }
-        
     }
     
     NSString *updateStr = [NSString stringWithFormat:@"         "
