@@ -36,6 +36,8 @@
     
     if(stateSegmented.selectedSegment == StateTypeModelHeader){
         resultTextView.string = [self createModelHeader];
+        
+        [resultTextView.string writeToFile:@"~/Desktop/iseng.h" atomically:YES encoding:NSASCIIStringEncoding error:nil];
     }else if(stateSegmented.selectedSegment == StateTypeModelMain){
         resultTextView.string = [self createModelMain];
     }else if(stateSegmented.selectedSegment == StateTypeDatabase){
@@ -71,8 +73,15 @@
         //Dict Result
         
         if(![varModel.variableName isEqualToString:@""] && varModel.variableName){
+            
             NSString *dictString = [NSString stringWithFormat:
                                     @"            self.%@ = [self %@:jsonDict[@\"%@\"]];\n", varModel.variableName, varModel.variableDict, varModel.variableName];
+            
+            if([varModel.variableType isEqualToString:@"NSDate"]){
+                dictString = [NSString stringWithFormat:
+                                    @"            self.%@ = [jsonDict objectForKey:@\"%@\"];\n", varModel.variableName, varModel.variableName];
+            }
+            
             
             dictionaryString = [dictionaryString stringByAppendingString:dictString];
     
@@ -123,6 +132,7 @@
                               "-(void)encodeWithCoder:(NSCoder *)encoder{\n"
                               @"%@"
                               "}\n"
+                              "\n@end"
                               ,modelNameTextField.stringValue, modelNameTextField.stringValue, dictionaryString, fmResultString, decodeResultString, encodeResultString];
     
     return resultString;
