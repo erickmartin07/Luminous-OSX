@@ -30,19 +30,29 @@
     [self generateTapped:nil];
 }
 
+- (void)writeStringToFile:(NSString*)aString withFileName:(NSString *)fileName{
+    
+    // Build the path, and create if needed.
+    NSString* filePath = [NSSearchPathForDirectoriesInDomains(NSDesktopDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString* fileAtPath = [filePath stringByAppendingPathComponent:fileName];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:fileAtPath]) {
+        [[NSFileManager defaultManager] createFileAtPath:fileAtPath contents:nil attributes:nil];
+    }
+    
+    // The main act...
+    [[aString dataUsingEncoding:NSUTF8StringEncoding] writeToFile:fileAtPath atomically:NO];
+}
+
+
 - (IBAction)generateTapped:(id)sender {
     
     [self arrayOfVariableWithString:inputTextView.string];
     
-    if(stateSegmented.selectedSegment == StateTypeModelHeader){
-        resultTextView.string = [self createModelHeader];
-        
-        [resultTextView.string writeToFile:@"~/Desktop/iseng.h" atomically:YES encoding:NSASCIIStringEncoding error:nil];
-    }else if(stateSegmented.selectedSegment == StateTypeModelMain){
-        resultTextView.string = [self createModelMain];
-    }else if(stateSegmented.selectedSegment == StateTypeDatabase){
-        resultTextView.string = [self createDatabaseStringWithIdString:primaryKeyTextField.stringValue];
-    }
+    [self writeStringToFile:[self createModelHeader] withFileName:[NSString stringWithFormat:@"%@.h", modelNameTextField.stringValue]];
+    [self writeStringToFile:[self createModelMain] withFileName:[NSString stringWithFormat:@"%@.m", modelNameTextField.stringValue]];
+
+    resultTextView.string = [self createDatabaseStringWithIdString:primaryKeyTextField.stringValue];
     
     [[NSPasteboard generalPasteboard] clearContents];
     [[NSPasteboard generalPasteboard] setString:resultTextView.string forType:NSStringPboardType];
@@ -191,16 +201,16 @@
                            "success = [db executeUpdate:@\"INSERT INTO %@(%@) values(%@)\", "
                            "%@];", modelNameTextField.stringValue, variableNameString, questionMarkString, objectString];
     
-    NSString *resultString = [NSString stringWithFormat:@"#pragma mark - %@\n\n\n"
+    NSString *resultString = [NSString stringWithFormat:@"#pragma mark - %@\n\n"
                               
                               "-(BOOL)update%@:(%@ *)obj{\n"
                               "     __block BOOL success = NO;\n\n"
                               "     [queue inTransaction:^(FMDatabase *db, BOOL *rollback) {\n\n"
-                              "         [db executeUpdate:@\"DELETE FROM '%@' WHERE %@=?\",obj.%@];\n"
+                              "         [db executeUpdate:@\"DELETE FROM '%@' WHERE %@=?\",@(obj.%@)];\n"
                               "%@\n"
                               "     }];\n"
                               "     return success;\n"
-                              "}\n\n\n"
+                              "}\n\n"
                               
                               "-(NSArray *)getAll%@s{\n"
                               "     __block NSMutableArray *result = [NSMutableArray array];\n\n"
@@ -212,7 +222,7 @@
                               "         }\n"
                               "     }];\n\n"
                               "     return result;\n"
-                              "}\n\n\n"
+                              "}\n\n"
                               
                               "-(void)deleteAll%@s{\n"
                               "     [queue inTransaction:^(FMDatabase *db, BOOL *rollback) {\n"
@@ -230,7 +240,7 @@
                               "         }\n"
                               "     }];\n\n"
                               "     return result;\n"
-                              "}\n\n\n",
+                              "}",
                               
                               //pragma mark
                               modelNameTextField.stringValue,

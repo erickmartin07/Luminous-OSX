@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9059"/>
@@ -743,20 +743,20 @@ NSNumber eventOrderNumber</string>
                                 </textFieldCell>
                             </textField>
                             <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryU-Az-5Ap">
-                                <rect key="frame" x="485" y="9" width="462" height="464"/>
+                                <rect key="frame" x="485" y="9" width="462" height="494"/>
                                 <clipView key="contentView" id="xIP-M0-Pkp">
-                                    <rect key="frame" x="1" y="1" width="460" height="462"/>
+                                    <rect key="frame" x="1" y="1" width="460" height="492"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="5Ip-sp-AL2">
-                                            <rect key="frame" x="0.0" y="0.0" width="460" height="462"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="460" height="492"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <animations/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="460" height="462"/>
+                                            <size key="minSize" width="460" height="492"/>
                                             <size key="maxSize" width="472" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="460" height="462"/>
+                                            <size key="minSize" width="460" height="492"/>
                                             <size key="maxSize" width="472" height="10000000"/>
                                         </textView>
                                     </subviews>
@@ -770,7 +770,7 @@ NSNumber eventOrderNumber</string>
                                     <animations/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="mYy-Iy-KbH">
-                                    <rect key="frame" x="445" y="1" width="16" height="462"/>
+                                    <rect key="frame" x="445" y="1" width="16" height="492"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </scroller>
@@ -801,23 +801,8 @@ NSNumber eventOrderNumber</string>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XIx-mH-bkD">
-                                <rect key="frame" x="483" y="507" width="466" height="24"/>
-                                <animations/>
-                                <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="EeV-w6-s8n">
-                                    <font key="font" metaFont="system"/>
-                                    <segments>
-                                        <segment label="Model Header" width="153"/>
-                                        <segment label="Model Main" width="153" selected="YES" tag="1"/>
-                                        <segment label="Database" width="152"/>
-                                    </segments>
-                                </segmentedCell>
-                                <connections>
-                                    <action selector="changeState:" target="XfG-lQ-9wD" id="HCb-9w-fRQ"/>
-                                </connections>
-                            </segmentedControl>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0fl-0O-TLr">
-                                <rect key="frame" x="479" y="474" width="474" height="32"/>
+                                <rect key="frame" x="479" y="502" width="474" height="32"/>
                                 <animations/>
                                 <buttonCell key="cell" type="push" title="GENERATE" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="esP-ZZ-oPB">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -831,10 +816,8 @@ NSNumber eventOrderNumber</string>
                         <constraints>
                             <constraint firstItem="69d-K0-LPK" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="0df-sF-w1q"/>
                             <constraint firstAttribute="trailing" secondItem="0fl-0O-TLr" secondAttribute="trailing" constant="12" id="9jv-x2-4wM"/>
-                            <constraint firstItem="ryU-Az-5Ap" firstAttribute="top" secondItem="0fl-0O-TLr" secondAttribute="bottom" constant="8" id="B4d-dp-jr5"/>
+                            <constraint firstItem="ryU-Az-5Ap" firstAttribute="top" secondItem="0fl-0O-TLr" secondAttribute="bottom" constant="6" id="B4d-dp-jr5"/>
                             <constraint firstAttribute="trailing" secondItem="ryU-Az-5Ap" secondAttribute="trailing" constant="12" id="C9d-LA-ffM"/>
-                            <constraint firstItem="XIx-mH-bkD" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="13" id="CNq-DC-TtD"/>
-                            <constraint firstItem="0fl-0O-TLr" firstAttribute="top" secondItem="XIx-mH-bkD" secondAttribute="bottom" constant="7" id="Hdk-K1-qI8"/>
                             <constraint firstAttribute="bottom" secondItem="ryU-Az-5Ap" secondAttribute="bottom" constant="9" id="JmB-zx-2Ry"/>
                             <constraint firstItem="Sq8-mw-cA2" firstAttribute="width" secondItem="ryU-Az-5Ap" secondAttribute="width" constant="-1" id="LHg-3S-PmF"/>
                             <constraint firstItem="fQl-YK-9BO" firstAttribute="width" secondItem="E9M-lL-YoQ" secondAttribute="width" id="MDS-Oi-4md"/>
@@ -842,14 +825,12 @@ NSNumber eventOrderNumber</string>
                             <constraint firstItem="fQl-YK-9BO" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="13" id="T1r-hD-wKH"/>
                             <constraint firstItem="Sq8-mw-cA2" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="7" id="YDo-j9-Zej"/>
                             <constraint firstItem="fQl-YK-9BO" firstAttribute="leading" secondItem="Dbt-aW-sl2" secondAttribute="trailing" constant="12" id="a3p-Mf-Rmo"/>
-                            <constraint firstItem="Sq8-mw-cA2" firstAttribute="height" secondItem="ryU-Az-5Ap" secondAttribute="height" id="dQM-Nk-Usk"/>
+                            <constraint firstItem="Sq8-mw-cA2" firstAttribute="height" secondItem="ryU-Az-5Ap" secondAttribute="height" constant="-30" id="dQM-Nk-Usk"/>
                             <constraint firstAttribute="bottom" secondItem="Sq8-mw-cA2" secondAttribute="bottom" constant="9" id="fNm-ZF-jdM"/>
                             <constraint firstItem="0fl-0O-TLr" firstAttribute="width" secondItem="ryU-Az-5Ap" secondAttribute="width" id="fXy-3n-ih5"/>
                             <constraint firstItem="69d-K0-LPK" firstAttribute="top" secondItem="Dbt-aW-sl2" secondAttribute="bottom" constant="8" id="gLq-ak-80O"/>
                             <constraint firstItem="E9M-lL-YoQ" firstAttribute="leading" secondItem="69d-K0-LPK" secondAttribute="trailing" constant="13" id="gMt-cw-jAu"/>
                             <constraint firstItem="Dbt-aW-sl2" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="15" id="gaZ-X0-mpr"/>
-                            <constraint firstItem="XIx-mH-bkD" firstAttribute="width" secondItem="0fl-0O-TLr" secondAttribute="width" id="kh9-0a-W2N"/>
-                            <constraint firstItem="XIx-mH-bkD" firstAttribute="leading" secondItem="fQl-YK-9BO" secondAttribute="trailing" constant="17" id="kzN-u9-bEl"/>
                             <constraint firstItem="0fl-0O-TLr" firstAttribute="leading" secondItem="E9M-lL-YoQ" secondAttribute="trailing" constant="17" id="lPr-jg-0UC"/>
                             <constraint firstItem="E9M-lL-YoQ" firstAttribute="top" secondItem="fQl-YK-9BO" secondAttribute="bottom" constant="5" id="s7Q-3z-lhG"/>
                             <constraint firstItem="Dbt-aW-sl2" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="21" id="xkB-CW-3RA"/>
@@ -858,11 +839,11 @@ NSNumber eventOrderNumber</string>
                         <animations/>
                     </view>
                     <connections>
+                        <outlet property="generateButton" destination="0fl-0O-TLr" id="cVB-yt-5LH"/>
                         <outlet property="inputTextView" destination="N3v-9F-IO9" id="EZt-Le-8YU"/>
                         <outlet property="modelNameTextField" destination="fQl-YK-9BO" id="ZvG-lu-gmp"/>
                         <outlet property="primaryKeyTextField" destination="E9M-lL-YoQ" id="ZSj-74-P38"/>
                         <outlet property="resultTextView" destination="5Ip-sp-AL2" id="IP8-bq-TAB"/>
-                        <outlet property="stateSegmented" destination="XIx-mH-bkD" id="fO4-Cn-fmV"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

@@ -23,6 +23,7 @@ typedef enum{
 @property (strong) IBOutlet NSSegmentedControl *stateSegmented;
 @property (nonatomic, retain) NSMutableArray *resultArray;
 
+@property (strong) IBOutlet NSButton *generateButton;
 - (IBAction)generateTapped:(id)sender;
 - (IBAction)changeState:(id)sender;
 

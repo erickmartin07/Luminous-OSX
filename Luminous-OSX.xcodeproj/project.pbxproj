@@ -503,6 +503,7 @@
 				3453A07A1BF2FDD5007C63D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3453A07B1BF2FDD5007C63D4 /* Build configuration list for PBXNativeTarget "Luminous-OSXTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +512,7 @@
 				3453A07D1BF2FDD5007C63D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3453A07E1BF2FDD5007C63D4 /* Build configuration list for PBXNativeTarget "Luminous-OSXUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +521,7 @@
 				3453A0801BF2FDD5007C63D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
