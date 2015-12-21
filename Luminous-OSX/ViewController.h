@@ -8,19 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 
-typedef enum{
-    StateTypeModelHeader = 0,
-    StateTypeModelMain = 1,
-    StateTypeDatabase = 2
-}StateType;
-
 @interface ViewController : NSViewController
 
 @property (strong) IBOutlet NSTextField *modelNameTextField;
 @property (strong) IBOutlet NSTextField *primaryKeyTextField;
 @property (strong) IBOutlet NSTextView *inputTextView;
 @property (strong) IBOutlet NSTextView *resultTextView;
-@property (strong) IBOutlet NSSegmentedControl *stateSegmented;
 @property (nonatomic, retain) NSMutableArray *resultArray;
 
 @property (strong) IBOutlet NSButton *generateButton;

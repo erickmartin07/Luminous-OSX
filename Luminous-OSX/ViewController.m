@@ -11,7 +11,7 @@
 
 @implementation ViewController
 
-@synthesize modelNameTextField, inputTextView, resultTextView, stateSegmented, resultArray;
+@synthesize modelNameTextField, inputTextView, resultTextView, resultArray;
 @synthesize primaryKeyTextField;
 
 - (void)viewDidLoad {
